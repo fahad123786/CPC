@@ -1,28 +1,12 @@
+
 import {
-  Play,
   Users,
   Target,
   Leaf,
   ArrowRight,
 } from "lucide-react";
-import { useRef, useState } from "react";
 
 const AboutCP = () => {
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const toggleVideo = async () => {
-    if (!videoRef.current) return;
-
-    if (videoRef.current.paused) {
-      await videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
-    }
-  };
-
   return (
     <section className="w-full bg-[#f8f8f5] py-1 md:py-10 lg:py-1">
       <div className="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-10">
@@ -30,40 +14,21 @@ const AboutCP = () => {
 
           {/* ================= LEFT VIDEO ================= */}
           <div className="relative overflow-hidden rounded-[10px]">
-
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[10px] bg-[#d9ddd5]">
 
               <video
-                ref={videoRef}
                 className="h-full w-full object-cover"
                 src="https://v1.pinimg.com/videos/mc/720p/d3/66/2b/d3662b395d2622f5dea47fb23c45c892.mp4"
                 poster="/images/CPC Website.png"
+                autoPlay
+                muted
+                loop
                 playsInline
-                onEnded={() => setIsPlaying(false)}
               />
 
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/15" />
+              {/* Light Overlay */}
+              <div className="pointer-events-none absolute inset-0 bg-black/15" />
 
-              {/* Play Button */}
-              <button
-                type="button"
-                onClick={toggleVideo}
-                aria-label={isPlaying ? "Pause CPC story" : "Play CPC story"}
-                className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-3"
-              >
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg transition duration-300 hover:scale-110">
-                  {isPlaying ? <span className="h-5 w-1.5 rounded-sm bg-[#123f42]" /> : <Play size={20} fill="currentColor" className="ml-1 text-[#123f42]" />}
-                </span>
-
-                <span className="text-sm font-medium text-white drop-shadow-md">
-                  {isPlaying ? "Pause Our Story" : "Watch Our Story"}
-                </span>
-
-                <span className="text-xs text-white/90">
-                  2:15
-                </span>
-              </button>
             </div>
           </div>
 
@@ -77,17 +42,13 @@ const AboutCP = () => {
 
             {/* Main Heading */}
             <h2 className="max-w-[560px] text-3xl font-bold leading-[1.12] tracking-[-0.025em] text-[#123f42] sm:text-4xl lg:text-[46px]">
-
-              {/* First Line */}
               <span className="block whitespace-nowrap">
                 Your Partner in
               </span>
 
-              {/* Second Line */}
               <span className="block">
                 Planning &amp; Development
               </span>
-
             </h2>
 
             {/* Description */}
@@ -104,7 +65,6 @@ const AboutCP = () => {
 
               {/* Feature 01 */}
               <div className="flex items-start gap-4">
-
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e8ece8]">
                   <Users
                     size={25}
@@ -122,12 +82,10 @@ const AboutCP = () => {
                     Skilled professionals with proven expertise.
                   </p>
                 </div>
-
               </div>
 
               {/* Feature 02 */}
               <div className="flex items-start gap-4">
-
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e8ece8]">
                   <Target
                     size={25}
@@ -145,12 +103,10 @@ const AboutCP = () => {
                     Your vision, our commitment.
                   </p>
                 </div>
-
               </div>
 
               {/* Feature 03 */}
               <div className="flex items-start gap-4">
-
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#e8ece8]">
                   <Leaf
                     size={25}
@@ -168,7 +124,6 @@ const AboutCP = () => {
                     For a better future.
                   </p>
                 </div>
-
               </div>
 
             </div>
@@ -195,3 +150,4 @@ const AboutCP = () => {
 };
 
 export default AboutCP;
+

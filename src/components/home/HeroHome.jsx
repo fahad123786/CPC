@@ -49,6 +49,7 @@ const HeroHome = () => {
       {/* ================= HERO ================= */}
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8 lg:px-10">
         <div className="relative min-h-[560px] overflow-hidden rounded-[2px]">
+
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
@@ -57,8 +58,8 @@ const HeroHome = () => {
               className="h-full w-full object-cover"
             />
 
-            {/* Left White Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#F7F7F2] via-[#F7F7F2]/95 via-[30%] to-transparent" />
+            {/* Left White Overlay - Ends Around Half */}
+            <div className="absolute inset-y-0 left-0 w-[58%] bg-gradient-to-r from-[#F7F7F2] via-[#F7F7F2]/95 via-[65%] to-transparent" />
 
             {/* Bottom Subtle Gradient */}
             <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#F7F7F2]/40 to-transparent" />
@@ -67,6 +68,7 @@ const HeroHome = () => {
           {/* Hero Content */}
           <div className="relative z-10 flex min-h-[560px] items-center">
             <div className="w-full max-w-[590px] py-16 lg:py-20">
+
               {/* Small Heading */}
               <div className="mb-5 flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[2px] text-[#397275] sm:text-[10px]">
                 <span>Urban Planning</span>
@@ -119,6 +121,8 @@ const HeroHome = () => {
 
               {/* Stats */}
               <div className="mt-9 flex flex-wrap items-center gap-0">
+
+                {/* Stat 01 */}
                 <div className="flex items-center gap-2.5 pr-7">
                   <div className="flex h-7 w-7 items-center justify-center rounded-full border border-[#397275]/30">
                     <Map size={14} className="text-[#397275]" />
@@ -135,8 +139,9 @@ const HeroHome = () => {
                   </div>
                 </div>
 
-                <div className="h-9 w-px bg-[#123F42]/15"></div>
+                <div className="h-9 w-px bg-[#123F42]/15" />
 
+                {/* Stat 02 */}
                 <div className="flex items-center gap-2.5 px-7">
                   <div className="flex h-7 w-7 items-center justify-center rounded-full border border-[#397275]/30">
                     <Building2 size={14} className="text-[#397275]" />
@@ -153,8 +158,9 @@ const HeroHome = () => {
                   </div>
                 </div>
 
-                <div className="h-9 w-px bg-[#123F42]/15"></div>
+                <div className="h-9 w-px bg-[#123F42]/15" />
 
+                {/* Stat 03 */}
                 <div className="flex items-center gap-2.5 pl-7">
                   <div className="flex h-7 w-7 items-center justify-center rounded-full border border-[#397275]/30">
                     <ShieldCheck size={14} className="text-[#397275]" />
