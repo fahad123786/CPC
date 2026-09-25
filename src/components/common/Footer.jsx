@@ -137,11 +137,11 @@ const Footer = () => {
 
               {/* Email */}
               <a
-                href="mailto:info@cpc.com"
+                href="mailto:info@cityplanningconsultant.com"
                 className="flex items-start gap-3 text-[11px] text-white/55 transition hover:text-white"
               >
                 <Mail size={13} className="mt-0.5 shrink-0" />
-                <span>info@cpc.com</span>
+                <span>info@cityplanningconsultant.com</span>
               </a>
 
               {/* Location */}
@@ -176,7 +176,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3 text-[9px] text-white/40 sm:flex-row sm:items-center sm:justify-between">
 
             <p>
-              © 2025 CPC. All Rights Reserved.
+              © {new Date().getFullYear()} CPC. All Rights Reserved.
             </p>
 
             <div className="flex items-center gap-5">

@@ -23,7 +23,7 @@ export default function ContactHero() {
 
                         <div className="mt-12 flex items-end justify-between border-t border-[#123f42]/10 pt-6">
                             <div className="space-y-4 text-sm text-[#315355]">
-                                <p className="flex items-center gap-3"><Mail size={16} className="text-[#b79538]" /> info@cpc.com</p>
+                                <p className="flex items-center gap-3"><Mail size={16} className="text-[#b79538]" /> info@cityplanningconsultant.com</p>
                                 <p className="flex items-center gap-3"><Phone size={16} className="text-[#b79538]" /> +92 300 1234567</p>
                                 <p className="flex items-center gap-3"><MapPin size={16} className="text-[#b79538]" /> Lahore, Pakistan</p>
                             </div>
