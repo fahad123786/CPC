@@ -88,13 +88,15 @@ export default function ServicesGrid() {
                                 key={title}
                                 className="group relative min-h-[390px] overflow-hidden rounded-[1.5rem] border border-white/20 bg-[#123f42] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-[#b79538]/60 hover:shadow-[0_20px_50px_rgba(18,63,66,0.10)] md:p-8"
                             >
-                                <img src={image} alt={`${title} project`} className="absolute inset-0 h-full w-full object-cover opacity-45 transition duration-700 group-hover:scale-105 group-hover:opacity-60" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#073f42] via-[#073f42]/70 to-[#073f42]/35" />
+                                {/* Background Image */}
+                                <img
+                                    src={image}
+                                    alt={`${title} project`}
+                                    className="absolute inset-0 h-full w-full object-cover opacity-25 transition duration-700 group-hover:scale-105 group-hover:opacity-35"
+                                />
 
-                                {/* Decorative Number */}
-                                <div className="pointer-events-none absolute -right-4 -top-8 font-serif text-[150px] leading-none text-white/[0.08] transition duration-500 group-hover:text-[#d8bf72]/[0.14]">
-                                    {number}
-                                </div>
+                                {/* Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#073f42]/80 via-[#073f42]/45 to-[#073f42]/20" />
 
                                 {/* Top Row */}
                                 <div className="relative flex items-start justify-between">
@@ -127,7 +129,7 @@ export default function ServicesGrid() {
                                 </div>
 
                                 {/* Bottom */}
-                                <div className="absolute bottom-7 left-7 right-7 flex items-center justify-between border-t border-white/20 pt-5 md:left-8 md:right-8 md:bottom-8">
+                                <div className="absolute bottom-7 left-7 right-7 flex items-center justify-between border-t border-white/20 pt-5 md:bottom-8 md:left-8 md:right-8">
                                     <span className="text-xs font-medium uppercase tracking-[2px] text-white/60 transition-colors group-hover:text-[#d8bf72]">
                                         Explore service
                                     </span>

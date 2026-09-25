@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function ProjectsHero() {
     return (
-        <section className="relative overflow-hidden bg-[#123f42] px-6 pb-20 pt-40 text-white lg:px-16 lg:pb-28">
+        <section className="relative overflow-hidden bg-[#123f42] px-6 pb-10 pt-20 text-white lg:px-16 lg:pb-28">
             <img
                 src="/images/03.jpg"
                 alt="CPC project masterplan"

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function ServicesHero() {
   return (
-    <section className="relative overflow-hidden bg-[#e8eee9] px-6 pb-20 pt-40 lg:px-16 lg:pb-28">
+    <section className="relative overflow-hidden bg-[#e8eee9] px-6 pb-20 pt-20 lg:px-16 lg:pb-28">
       <div className="mx-auto grid max-w-[1400px] items-end gap-12 lg:grid-cols-[1.05fr_.95fr]">
 
         {/* Left Content */}

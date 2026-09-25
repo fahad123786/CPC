@@ -3,7 +3,10 @@ import AboutStory from '../about/AboutStory'
 
 const About = () => {
   return (
-    <div><AboutHero /><AboutStory /></div>
+    <div>
+      <AboutHero />
+    <AboutStory />
+    </div>
   )
 }
 
