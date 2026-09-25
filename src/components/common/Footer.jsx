@@ -64,7 +64,7 @@ const Footer = () => {
             <div className="mt-5 flex items-center gap-2">
 
               <a
-                href="#"
+                href="https://www.facebook.com/share/193fNvybet/?mibextid=wwXIfr"
                 className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
               >
                 <Facebook size={12} />
@@ -78,7 +78,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/company/cpcplanning/"
                 className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
               >
                 <Linkedin size={12} />
@@ -148,21 +148,21 @@ const Footer = () => {
               <div className="flex items-start gap-3 text-[11px] text-white/55">
                 <MapPin size={13} className="mt-0.5 shrink-0" />
                 <span>
-                  Lahore, Pakistan
+                Office No 02, First Floor, 17 Block D-II, MA Johar Town, Lahore, Pakistan
                 </span>
               </div>
 
               {/* Phone */}
               <a
-                href="tel:+923001234567"
+                href="tel:+92 333 2545730 "
                 className="flex items-start gap-3 text-[11px] text-white/55 transition hover:text-white"
               >
                 <Phone size={13} className="mt-0.5 shrink-0" />
-                <span>+92 300 1234567</span>
+                <span>+92 333 2545730</span>
               </a>
 
               <p className="pt-1 text-[10px] text-white/40">
-                Mon – Sat: 9:00 AM – 6:00 PM
+                Mon – Sat: 10:00 AM – 6:00 PM
               </p>
 
             </div>
