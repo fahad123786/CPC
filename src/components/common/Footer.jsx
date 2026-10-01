@@ -71,7 +71,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/cpcplanning?stkn=MW5hOTdzcnpwaGhlcg=="
                 className="flex h-7 w-7 items-center justify-center rounded-full border border-white/20 text-white/60 transition hover:border-white/50 hover:text-white"
               >
                 <Instagram size={12} />

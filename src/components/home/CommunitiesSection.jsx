@@ -124,7 +124,7 @@ const CommunitiesSection = () => {
                                 </button>
 
                                 <button className="rounded-full border border-white/40 px-5 py-2.5 text-xs font-medium text-white transition hover:bg-white/10">
-                                    +92 300 1234567
+                                    +92 333 2545730
                                 </button>
                             </div>
 

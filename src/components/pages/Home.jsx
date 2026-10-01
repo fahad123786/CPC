@@ -3,6 +3,7 @@ import Featured from '../home/Featured'
 import AboutCP from '../home/AboutCP'
 import Planning from '../home/Planning'
 import Approach from '../home/Approach'
+import TeamSection from '../home/TeamSection'
 import CommunitiesSection from '../home/CommunitiesSection'
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <AboutCP />
             <Planning />
             <Approach />
+            <TeamSection />
             <CommunitiesSection />
         </div>
     )
