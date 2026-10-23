@@ -38,6 +38,12 @@ const teamMembers = [
         image: "/team/R%20zohaib.jpeg",
         showFullImage: true,
     },
+    {
+        name: "Waqas Ahmed Raza",
+        role: "Senior Urban Planning Advisor",
+        description: "Advises and guides spatial planning, land-use planning, environmental planning, and sustainable urban development through professional planning expertise and evidence-based recommendations.",
+        image: "/team/Waqas%20Ahmed%20Raza.jpeg",
+    }
 ];
 
 const TeamCard = ({ member }) => (
