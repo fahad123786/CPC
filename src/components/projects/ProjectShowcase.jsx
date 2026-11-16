@@ -1,32 +1,32 @@
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const projects = [
     {
-        title: "Royal Orchard",
+        title: "Town Planning",
         type: "Master Planning",
-        location: "Multan, Pakistan",
+        location: "Lahore, Pakistan",
         image: "/images/Parliament1.jpg",
         size: "md:col-span-7",
+        href: "/projects/town-planning",
     },
     {
-        title: "Bahria Town Icon Valley",
+        title: "Architecture Design",
         type: "Commercial Complex",
-        location: "Karachi, Pakistan",
+        location: "Lahore, Pakistan",
         image: "/images/gate_10 - Photo.jpg",
         size: "md:col-span-5",
+        href: "/projects/architecture-design",
     },
     {
-        title: "DHA City Phase 2",
+        title: "Construction",
         type: "Housing Scheme",
         location: "Lahore, Pakistan",
         image: "/images/top1.jpg",
         size: "md:col-span-5",
+        href: "/projects/construction",
     },
-    {
-        title: "Metro Bus Corridor",
-        type: "Infrastructure",
-        location: "Islamabad, Pakistan",
-        image: "/images/top4.jpg",
-        size: "md:col-span-7",
-    },
+   
 ];
 
 export default function ProjectShowcase() {
@@ -58,7 +58,7 @@ export default function ProjectShowcase() {
                     {projects.map((project) => (
                         <article
                             key={project.title}
-                            className={`group ${project.size}`}
+                            className={`group relative ${project.size}`}
                         >
                             <div className="relative aspect-[1.35] overflow-hidden rounded-[1.5rem] bg-[#dbe4df]">
 
@@ -86,9 +86,23 @@ export default function ProjectShowcase() {
                                     <p className="mt-1 text-sm text-white/75">
                                         {project.location}
                                     </p>
+
+                                    {project.href && (
+                                        <span className="mt-4 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[1.5px] text-white/90">
+                                            Explore more
+                                            <ArrowUpRight size={15} />
+                                        </span>
+                                    )}
                                 </div>
 
                             </div>
+                            {project.href && (
+                                <Link
+                                    to={project.href}
+                                    className="absolute inset-0 rounded-[1.5rem] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#b79538]"
+                                    aria-label="Explore Town Planning projects"
+                                />
+                            )}
                         </article>
                     ))}
 
@@ -97,4 +111,3 @@ export default function ProjectShowcase() {
         </section>
     );
 }
-

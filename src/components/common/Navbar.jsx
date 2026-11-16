@@ -45,9 +45,13 @@ const Navbar = () => {
               to={link.href}
               className="relative py-2 text-[13px] font-medium text-[#183F42]/80 transition-all duration-300 hover:text-[#123F42]"
             >
-              {link.name}
-              {({ isActive }) => isActive && (
-                <span className="absolute bottom-0 left-0 h-[2px] w-full bg-[#B79538]"></span>
+              {({ isActive }) => (
+                <>
+                  {link.name}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 h-[2px] w-full bg-[#B79538]"></span>
+                  )}
+                </>
               )}
             </NavLink>
           ))}

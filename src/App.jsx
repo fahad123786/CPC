@@ -7,6 +7,12 @@ import Contact from './components/pages/Contact'
 import Home from './components/pages/Home'
 import Projects from './components/pages/Projects'
 import Services from './components/pages/Services'
+import TownPlanning from './components/projects/TownPlanning'
+import TownPlanningProject from './components/projects/TownPlanningProject'
+import ArchitectureDesign from './components/projects/ArchitectureDesign'
+import ArchitectureDesignProject from './components/projects/ArchitectureDesignProject.jsx'
+import Construction from './components/projects/Construction.jsx'
+import ConstructionProject from './components/projects/constructionProject.jsx'
 
 export default function App() {
   return (
@@ -18,6 +24,12 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/town-planning" element={<TownPlanning />} />
+          <Route path="/projects/town-planning/:projectSlug" element={<TownPlanningProject />} />
+          <Route path="/projects/architecture-design" element={<ArchitectureDesign />} />
+          <Route path="/projects/architecture-design/:projectSlug" element={<ArchitectureDesignProject />} />
+          <Route path="/projects/construction" element={<Construction />} />
+          <Route path="/projects/construction/:projectSlug" element={<ConstructionProject />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />

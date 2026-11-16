@@ -1,1 +1,128 @@
 @import "tailwindcss";
+
+@keyframes tp-rise-in {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 24px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes tp-orbit {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes tp-light-sweep {
+    0% {
+        transform: translateX(-130%) skewX(-16deg);
+    }
+
+    55%,
+    100% {
+        transform: translateX(430%) skewX(-16deg);
+    }
+}
+
+.tp-rise,
+.tp-project-card {
+    animation: tp-rise-in 750ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.tp-orbit {
+    animation: tp-orbit 70s linear infinite;
+}
+
+.tp-light-sweep {
+    animation: tp-light-sweep 12s ease-in-out 1.2s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tp-rise,
+    .tp-project-card,
+    .tp-orbit,
+    .tp-light-sweep {
+        animation: none;
+    }
+}
+
+.client-marquee {
+    container-type: inline-size;
+    overflow: hidden;
+}
+
+.client-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: client-marquee-scroll 36s linear infinite;
+    will-change: transform;
+}
+
+.client-marquee__group {
+    display: flex;
+    flex: none;
+    gap: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.client-marquee__item {
+    flex: 0 0 calc((100cqi - 6rem) / 5);
+}
+
+@keyframes client-marquee-scroll {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (hover: hover) {
+    .client-marquee:hover .client-marquee__track {
+        animation-play-state: paused;
+    }
+}
+
+@media (max-width: 1023px) {
+    .client-marquee__group {
+        gap: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .client-marquee__item {
+        flex-basis: calc((100cqi - 2.5rem) / 3);
+    }
+}
+
+@media (max-width: 639px) {
+    .client-marquee__group {
+        gap: 1rem;
+        padding-right: 1rem;
+    }
+
+    .client-marquee__item {
+        flex-basis: calc((100cqi - 1rem) / 2);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .client-marquee__track {
+        animation: none;
+        transform: none;
+    }
+
+    .client-marquee__group--duplicate {
+        display: none;
+    }
+
+    .client-marquee__group {
+        padding-right: 0;
+    }
+}

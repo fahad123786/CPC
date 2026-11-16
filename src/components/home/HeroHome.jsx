@@ -4,10 +4,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Map,
-  House,
   Building2,
-  FileSearch,
-  Landmark,
   ShieldCheck,
 } from "lucide-react";
 
@@ -67,39 +64,6 @@ const HeroHome = () => {
 
   const slide = slides[activeSlide];
 
-  const services = [
-    {
-      title: "Master Planning",
-      description: "Strategic plans for sustainable growth.",
-      icon: Map,
-    },
-    {
-      title: "Housing Schemes",
-      description: "Quality housing for modern living.",
-      icon: House,
-    },
-    {
-      title: "Architectural Design",
-      description: "Functional, aesthetic and context-driven design.",
-      icon: Building2,
-    },
-    {
-      title: "Project Studies",
-      description: "Feasibility assessments and technical advisory.",
-      icon: FileSearch,
-    },
-    {
-      title: "Infrastructure",
-      description: "Integrated systems for future-ready communities.",
-      icon: Landmark,
-    },
-    {
-      title: "NOCs & Approvals",
-      description: "Regulatory support and timely approvals.",
-      icon: ShieldCheck,
-    },
-  ];
-
   return (
     <section className="bg-[#F7F7F2] pt-2">
       {/* ================= HERO ================= */}
@@ -108,7 +72,7 @@ const HeroHome = () => {
           className="relative min-h-[560px] overflow-hidden rounded-[2px]"
           role="region"
           aria-roledescription="carousel"
-          aria-label="Featured CPC services"
+          aria-label="CPC homepage highlights"
         >
 
           {/* Background Image */}
@@ -290,44 +254,8 @@ const HeroHome = () => {
         </div>
       </div>
 
-      {/* ================= SERVICES ================= */}
-      <div className="mx-auto max-w-[1250px] px-5 pb-10 pt-6 sm:px-8 lg:px-10">
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
-          {services.map((service) => {
-            const Icon = service.icon;
-
-            return (
-              <a
-                href="#services"
-                key={service.title}
-                className="group min-h-[125px] rounded-[3px] border border-[#E4E6DF] bg-[#FAFAF6] px-4 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#C9D2CC] hover:bg-white hover:shadow-[0_10px_30px_rgba(18,63,66,0.06)]"
-              >
-                {/* Icon */}
-                <div className="mb-4">
-                  <Icon
-                    size={32}
-                    strokeWidth={2}
-                    className="text-[#397275] transition-transform duration-300 group-hover:scale-110"
-                  />
-                </div>
-
-                {/* Title */}
-                <h3 className="text-[10px] font-bold text-[#173F42] sm:text-[11px]">
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p className="mt-2 text-[8px] leading-3.5 text-[#7A8989] sm:text-[9px]">
-                  {service.description}
-                </p>
-              </a>
-            );
-          })}
-        </div>
-      </div>
     </section>
   );
 };
 
 export default HeroHome;
-

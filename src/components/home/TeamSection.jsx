@@ -36,11 +36,12 @@ const teamMembers = [
         role: "Director Operations",
         description: "Coordinates CPC's operations to help teams and projects run smoothly.",
         image: "/team/R%20zohaib.jpeg",
-        showFullImage: true,
+       
+        
     },
     {
         name: "Waqas Ahmed Raza",
-        role: "Senior Urban Planning Advisor",
+        role: "Senior Advisor Urban Planning",
         description: "Advises and guides spatial planning, land-use planning, environmental planning, and sustainable urban development through professional planning expertise and evidence-based recommendations.",
         image: "/team/Waqas%20Ahmed%20Raza.jpeg",
     }
@@ -52,8 +53,8 @@ const TeamCard = ({ member }) => (
             <img
                 src={member.image}
                 alt={member.name}
-                className={`aspect-4/3 w-full ${member.showFullImage ? "bg-black object-contain" : "object-cover object-top"}`}
-                style={member.showFullImage ? { transform: "scale(0.99)" } : undefined}
+                className={`aspect-4/3 w-full ${member.showFullImage ? " object-contain" : "object-cover object-top"}`}
+                style={member.showFullImage ? { transform: "scale(1.19)" } : undefined}
                 loading="lazy"
             />
         ) : (
